@@ -1,0 +1,25 @@
+1. Open Visual Studio Code
+2. Add locally cloned Repository to VSC
+3. Ctrl+Shift+P -> search for "Julia: Start REPL"
+4. Wait for Julia console to appear
+5. In Julia console:
+	5.1 Switch to "code"-folder: cd("code")
+	5.2 Type: "using Pkg"
+	5.3 Type: "Pkg.add([
+	"Random123",
+	"Distributions",
+	"Plots",
+	"StatsPlots",
+	"StatsBase",
+	"DataFrames",
+	"Chain",
+	"CSV"
+	])
+6. Wait for all package installations and initializations
+7. After package initialization is done, type in Julia-Console:
+	include("Utils.jl")
+and wait for package initialization again.
+8. Now you can run our test_simulation file:
+	8.1 Open "test_simulation.jl" and adjust parameters if needed
+	8.2 Run test simulation through Julia console: include("test_simulation.jl")
+	and wait for the simulation to finish. As output you should get the corresponding diagram.

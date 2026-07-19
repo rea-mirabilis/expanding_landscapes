@@ -1,4 +1,3 @@
-#=
 using Random
 using Random123
 using Distributions
@@ -9,7 +8,6 @@ using Statistics
 using DataFrames
 using Chain
 using Dates
-=#
 
 """
 We now represent genotypes (with potentially different genomes) and their size.
@@ -383,7 +381,7 @@ function generate_plots(data::DataFrame, μ, M, additive_effects, σ_epi; save::
 
     if save == true
         runtime = Dates.format(now(), "yyyymmdd_HHMM")
-        savefig("outputs/figures/L$(loci)l$(init_active_loci)i$(max_init_genotype_bits)_$(runtime).pdf")
+        savefig("outputs/figures/L$(loci)l$(init_active_loci)i$(max_init_genotype_bits)_$(runtime).png")
     end
     
     return output_plot

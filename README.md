@@ -18,7 +18,39 @@ A single `Utils.jl` file contains all necessary functions to run simulations wit
 2. Uncorrelated landscapes
 3. Semi-correlated landscapes
 
-Each can be explored through an executable `.jl` script or, (preferably) interactively through the corresponding jupyter notebook. Each simulation requires the initialization of several parameters and RNGs:
+Each can be explored through an executable `.jl` script or, (preferably) interactively through the corresponding jupyter notebook. 
+
+## User guide for exploring the code in Visual Studio code
+
+1. Open Visual Studio Code
+2. Install Julia extension for VSC: open the extensions tab in VSC and search for Julia and click install.
+3. Add locally cloned Repository to VSC
+4. Ctrl+Shift+P -> search for "Julia: Start REPL"
+5. Wait for Julia console to appear
+6. In Julia console:
+	6.1 Switch to "code"-folder: cd("code")
+	6.2 Type: "using Pkg"
+	6.3 Type: "Pkg.add([
+	"Random123",
+	"Distributions",
+	"Plots",
+	"StatsPlots",
+	"StatsBase",
+	"DataFrames",
+	"Chain",
+	"CSV"
+	])
+7. Wait for all package installations and initializations
+8. After package initialization is done, type in Julia-Console:
+	include("Utils.jl")
+and wait for package initialization again.
+9. Now you can run our test_simulation file:
+	9.1 Open "test_simulation.jl" and adjust parameters if needed
+	9.2 Run test simulation through Julia console: include("test_simulation.jl")
+	and wait for the simulation to finish. As output you should get the corresponding diagram.
+
+
+Each simulation requires the initialization of several parameters and RNGs:
 
 Parameter | Description
 --- | ---
@@ -57,6 +89,6 @@ df_genotypes = simulate(loci, init_active_loci, max_init_genotype_bits, total_po
 
 And thereafter, the data can be processed into time-series plots with: `generate_plots(df_genotypes, μ, M, additive_effects, σ_epi, save = false)`, with an optional `save` argument, which writes a timestamped plot to `code/outputs/figures`
 
-![example plot](code/outputs/figures/L20l10i1_20250902_1038.png)
+![example plot](code\outputs\figures\L100l10i1_20260719_1810.png)
 
 Additional analyses were performed in R. Corresponding datasets can be found in `code/outputs/data`. 
