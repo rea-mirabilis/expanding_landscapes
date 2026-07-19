@@ -22,12 +22,12 @@ Each can be explored through an executable `.jl` script or, (preferably) interac
 
 ## User guide for exploring the code in Visual Studio code
 
-1. Open Visual Studio Code
-2. Install Julia extension for VSC: open the extensions tab in VSC and search for Julia and click install.
-3. Add locally cloned Repository to VSC
-4. Ctrl+Shift+P -> search for "Julia: Start REPL"
-5. Wait for Julia console to appear
-6. In Julia console:
+1. Open Visual Studio Code  
+2. Install Julia extension for VSC: open the extensions tab in VSC and search for Julia and click install.  
+3. Add locally cloned Repository to VSC  
+4. Ctrl+Shift+P -> search for "Julia: Start REPL"  
+5. Wait for Julia console to appear  
+6. In Julia console:  
 	6.1 Switch to "code"-folder: 
     ```
     cd("code")
@@ -49,19 +49,19 @@ Each can be explored through an executable `.jl` script or, (preferably) interac
 	"CSV"
 	])
     ```
-7. Wait for all package installations and initializations
+7. Wait for all package installations and initializations  
 8. After package initialization is done, type in Julia-Console:
     ```
 	include("Utils.jl")
     ```
-and wait for package initialization again.
-9. Now you can run our test_simulation file:
-9.1 Open "test_simulation.jl" and adjust parameters if needed
-9.2 Run test simulation through Julia console: 
+and wait for package initialization again.  
+9. Now you can run our test_simulation file:  
+9.1 Open "test_simulation.jl" and adjust parameters if needed  
+9.2 Run test simulation through Julia console:  
 ```
 include("test_simulation.jl")
 ```
-and wait for the simulation to finish. As output you should get the corresponding diagram.
+and wait for the simulation to finish. As output you should get the corresponding diagram.  
 
 
 Each simulation requires the initialization of several parameters and RNGs:
