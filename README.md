@@ -38,7 +38,7 @@ Each can be explored through an executable `.jl` script or, (preferably) interac
     ```
 	6.3 Type: 
     ```
-    "Pkg.add([
+    Pkg.add([
 	"Random123",
 	"Distributions",
 	"Plots",
