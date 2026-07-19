@@ -56,12 +56,12 @@ Each can be explored through an executable `.jl` script or, (preferably) interac
     ```
 and wait for package initialization again.
 9. Now you can run our test_simulation file:
-	9.1 Open "test_simulation.jl" and adjust parameters if needed
-	9.2 Run test simulation through Julia console: 
-    ```
-    include("test_simulation.jl")
-    ```
-	and wait for the simulation to finish. As output you should get the corresponding diagram.
+9.1 Open "test_simulation.jl" and adjust parameters if needed
+9.2 Run test simulation through Julia console: 
+```
+include("test_simulation.jl")
+```
+and wait for the simulation to finish. As output you should get the corresponding diagram.
 
 
 Each simulation requires the initialization of several parameters and RNGs:
