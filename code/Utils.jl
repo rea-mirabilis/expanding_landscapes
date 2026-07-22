@@ -354,7 +354,7 @@ Function to take output dataframe from simulation and generate time-series plots
 """
 function generate_plots(data::DataFrame, μ, M, additive_effects, σ_epi; save::Bool = false)
     
-    df_counts, df_full_steps, df_genome_counts, df_per_genome_genotypes, df_avg_fitness, df_genome_size_pnine, sweeps = process_data(df_genotypes, μ, M, additive_effects, σ_epi)
+    df_counts, df_full_steps, df_genome_counts, df_per_genome_genotypes, df_avg_fitness, df_genome_size_pnine, sweeps = process_data(data, μ, M, additive_effects, σ_epi)
 
     # counting the number of unique genotypes/genomes seen
     plot_c1r1 = plot(df_counts.Step, df_full_steps.Cumulative, legend = false, title = "Cumulative Unique Genotype/Genome Pairs")
